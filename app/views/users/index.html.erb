@@ -1,0 +1,23 @@
+<% @artwork.each do |artwork| %>
+  <div>
+    <h1><%= artwork.title %></h1><br />
+    <i><%= artwork.image_url %></i><br />
+    <p><%= artwork.price %></p><br />
+  </div>
+
+  <hr />
+<% end %>
+
+<div>
+  <%= simple_form_for @artwork do |f| %>
+    <div>
+      <%= f.input :title %>
+      <%= f.input :picture %>
+      <%= f.input :price %>
+    </div>
+    <div>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <%= f.submit "Add Your Artwork", class: 'btn btn-primary' %>
+    </div>
+<% end %>
+</div>
