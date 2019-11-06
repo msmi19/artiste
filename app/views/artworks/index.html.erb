@@ -1,8 +1,8 @@
 <% @artwork.each do |artwork| %>
   <div>
     <h1><%= artwork.title %></h1><br />
-    <i><%= image_tag.user.artwork.url %></i><br />
     <p><%= artwork.price %></p><br />
+    <i><%= image_tag artwork.image_url %></i><br />
   </div>
 
   <hr />

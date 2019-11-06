@@ -1,1 +1,6 @@
 <h1>Buy Some Art!</h1>
+
+<%= form_tag new_user_artwork_path(:user_id) do %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-description="A month's subscription" data-amount="500" data-locale="auto"></script>
+<% end %>
+

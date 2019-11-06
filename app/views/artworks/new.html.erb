@@ -2,9 +2,9 @@
   <h1>Upload Your Artwork</h1>
   <%= simple_form_for [@user, @artwork] do |f| %>
     <%= f.input :title %>
-    <%= f.collection_select :category, @categories, :id, :category_name, prompt: 'Select Cateogry' %>
+    <%= f.collection_select :category_id, @categories, :id, :category_name, prompt: 'Select Cateogry' %>
     <%= f.input :price %>
-    <%= f.input :artwork %>
+    <%= f.input :image %>
     <br />
     <%= f.submit 'Upload', class: 'btn btn-primary' %>
   <% end %>
