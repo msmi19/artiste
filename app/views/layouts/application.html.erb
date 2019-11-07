@@ -16,11 +16,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <%= link_to 'Artiste', users_path, class: 'navbar-brand' %>
+        <%= link_to 'Artiste', categories_path, class: 'navbar-brand' %>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
             <%= link_to 'Home', root_path, class: 'navbar-brand' %>
           </li>
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to 'Create', new_user_artwork_path(:user_id), class: 'navbar-brand' %>
+            </li>
+          <% end %>
           <ul class="navbar-nav">
             <% if user_signed_in? %>
               <li class="nav-item">
@@ -41,7 +46,7 @@
   </ul>
 
 <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4">
+<footer class="footer">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
@@ -65,12 +70,9 @@
       <div class="col-md-2 mx-auto">
 
         <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Connect</h5>
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
           <div class="col-12 col-sm-3">
-            <b>Contact</b>
-            <br />
             morgansmith0219@gmail.com
-            <br />
           </div>
 
       </div>

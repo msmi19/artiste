@@ -21,15 +21,21 @@ class ArtworksController < ApplicationController
     end
   end
 
-  def require_authorized_for_current_artwork
-    if current_artwork.user != current_user
-      render plain: "Unauthorized", status: :unauthorized
-    end
+  def show
+    @artworks = Artwork.where(category_id: params[:category_id])
   end
+
 
   private 
 
   def artwork_params
     params.require(:artwork).permit(:title, :price, :image, :category_id, :user_id)
   end
+
+  def require_authorized_for_current_artwork
+    if current_artwork.user != current_user
+      render plain: "Unauthorized", status: :unauthorized
+    end
+  end
+
 end
