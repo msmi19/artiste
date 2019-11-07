@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     current_user.artoworks.create(artwork: current_artwork)
 
-    @amount = (current_artwork.cost * 100).to_i
+    @amount = (current_artwork.price * 100).to_i
 
       customer = Stripe::Customer.create(
         email: params[:stripeEmail],

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'home_page#index'
   resources :users do
     resources :artworks, only: [:create, :new, :index]
+    resources :categories, only: [:show]
   end
 end
