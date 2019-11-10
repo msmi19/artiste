@@ -1,5 +1,5 @@
 <div class="buy">
-  <h1>Browse Our Art!</h1>
+  <h1>Caegories to Choose From</h1>
 </div>
 
 
@@ -15,7 +15,7 @@
           data-wow-delay="0.3s">
 
           <div class="photography-link">
-            <%= link_to 'Photography', categories_path, class: 'navbar-brand' %>
+            <%= link_to 'Photography', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
 
       </div>
@@ -31,7 +31,7 @@
           data-wow-delay="0.4s">
 
           <div class="photography-link">
-            <%= link_to 'Paintings', categories_path, class: 'navbar-brand' %>
+            <%= link_to 'Paintings', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
 
       </div>
@@ -47,7 +47,7 @@
           data-wow-delay="0.5s">
 
           <div class="photography-link">
-            <%= link_to 'Self-Care', categories_path, class: 'navbar-brand' %>
+            <%= link_to 'Self-Care', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
 
       </div>

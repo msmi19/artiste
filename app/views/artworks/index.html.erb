@@ -1,9 +1,25 @@
+<div class="artworkform">
 <% @artwork.each do |artwork| %>
   <div>
     <h1><%= artwork.title %></h1><br />
     <p><%= artwork.price %></p><br />
-    <i><%= image_tag artwork.image_url %></i><br />
+    <i><%= image_tag artwork.image_url, class: 'img-fluid' %></i><br />
   </div>
-
+ <div class="payment"> 
+  <%= form_tag categories_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="A month's subscription"
+              data-locale="auto"></script>
+    <% end %>
+  </div>
   <hr />
 <% end %>
+</div>
