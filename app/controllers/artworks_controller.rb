@@ -1,9 +1,9 @@
 class ArtworksController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_artwork, only: [:show]
+  # before_action :require_authorized_for_current_artwork, only: [:show]
   
   def index
-    @artwork = Artwork.where(user_id: params[:user_id])
+    @artworks = Artwork.all
   end
 
   def new

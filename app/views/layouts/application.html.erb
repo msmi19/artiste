@@ -27,7 +27,7 @@
             </li>
           <% end %>
             <li class="nav-item active">
-              <%= link_to 'Explore', user_artwork_path(current_user), class: 'navbar-brand' %>
+              <%= link_to 'Explore', artworks_path, class: 'navbar-brand' %>
             </li>
           <ul class="navbar-nav">
             <% if user_signed_in? %>
