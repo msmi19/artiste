@@ -1,5 +1,5 @@
 <div class="buy">
-  <h1>Caegories to Choose From</h1>
+  <h1>Categories to Choose From</h1>
 </div>
 
 
@@ -13,11 +13,11 @@
 
         <img src="https://images.unsplash.com/photo-1525588165514-76d17b9a51f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="img-fluid mb-4" alt=""
           data-wow-delay="0.3s">
-
+        <% if user_signed_in? %>
           <div class="photography-link">
             <%= link_to 'Photography', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
-
+        <% end %>
       </div>
       <!--Grid column-->
 
@@ -29,11 +29,11 @@
 
         <img src="https://media.istockphoto.com/photos/abstract-oil-paint-texture-on-canvas-background-picture-id922954998" class="img-fluid mb-4" alt=""
           data-wow-delay="0.4s">
-
+        <% if user_signed_in? %>
           <div class="photography-link">
             <%= link_to 'Paintings', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
-
+        <% end %>
       </div>
       <!--Grid column-->
 
@@ -45,11 +45,11 @@
 
         <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="img-fluid mb-4" alt=""
           data-wow-delay="0.5s">
-
+        <% if user_signed_in? %>
           <div class="photography-link">
             <%= link_to 'Self-Care', new_user_artwork_path(current_user), class: 'navbar-brand' %>
           </div>
-
+        <% end %>
       </div>
       <!--Grid column-->
 
