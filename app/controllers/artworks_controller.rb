@@ -17,7 +17,7 @@ class ArtworksController < ApplicationController
     @artwork.user = current_user
 
     if @artwork.save
-      redirect_to user_artworks_path
+      redirect_to artworks_path
     end
   end
 
@@ -29,7 +29,7 @@ class ArtworksController < ApplicationController
   private 
 
   def artwork_params
-    params.require(:artwork).permit(:title, :price, :image, :category_id, :user_id)
+    params.require(:artwork).permit(:title, :price, :image, :category_id)
   end
 
   def require_authorized_for_current_artwork

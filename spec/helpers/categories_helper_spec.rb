@@ -12,3 +12,7 @@ require 'rails_helper'
 # end
 RSpec.describe CategoriesHelper, type: :helper do
 end
+
+RSpec.configure do |config|
+  config.include Devise::Test::ControllerHelpers, type: :controller
+end
